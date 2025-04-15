@@ -1,0 +1,362 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block body %}
+  <body>
+    <div class="containerr">
+      <!-- Left Side: Image/Slides -->
+      <section class="image-section">
+        <div class="image-wrapper">
+          <!-- Images for the carousel -->
+          <div class="image-carousel">
+            <img
+              src="{% static 'assets/img/configure/slideImage.webp' %}"
+              alt="Slide Image"
+              class="slide-image active"
+            />
+            <img
+              src="{% static 'assets/img/configure/slideImage1.webp' %}"
+              alt="Slide Image"
+              class="slide-image"
+            />
+            <img
+              src="{% static 'assets/img/configure/slideImage2.webp' %}"
+              alt="Slide Image"
+              class="slide-image"
+            />
+            <img
+              src="{% static 'assets/img/configure/slideImage3.webp' %}"
+              alt="Slide Image"
+              class="slide-image"
+            />
+          </div>
+
+          <!-- Navigation Buttons -->
+          <div class="navigation-buttons">
+            <button class="nav-button prev-button">&#10094;</button>
+            <button class="nav-button next-button">&#10095;</button>
+          </div>
+
+          <!-- Back Button -->
+          <a href="{% url 'home' %}" class="back-button">
+            <svg width="16" style="rotate: 180deg;" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="shrink-0"><path d="M14.667 5.72222L0.500324 5.72222ZM8.59556 10.4444L14.667 5.72222ZM8.59556 1L14.667 5.72222Z" fill="currentColor"></path><path d="M14.667 5.72222L0.500324 5.72222M14.667 5.72222L8.59556 10.4444M14.667 5.72222L8.59556 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          Back</a>
+        </div>
+      </section>
+      <!-- Right Side: Scrollable Content -->
+      <section class="content-section">
+        <!-- Step Indicator -->
+        <div class="step-indicator">
+          <button class="step-button active" data-step="1">Step 1: Base</button>
+          <button class="step-button" data-step="2">Step 2: Gears</button>
+          <button class="step-button" data-step="3">Step 3: Order</button>
+        </div>
+
+        <!-- Content for Step 1: Base -->
+        <div class="step-content active" data-step="1">
+
+          <hgroup class="header">
+            <h2><span>Build</span> the base.</h2>
+            <p><span>Scroll down</span> to pick your options and finishes.</p>
+          </hgroup>
+
+          <!-- Choose Your Model -->
+          <div class="section">
+            <h3>Choose Your Model</h3>
+            <ul class="model-list">
+              <li>
+                <button class="model-buttons">
+                  <div class="model-info">
+                    <p>Noovo <span>Lite</span></p>
+                    <p>starting at $162,700</p>
+                  </div>
+                  <div class="model-images" style="background-image: url('{% static 'assets/img/noovo_lite_1bc9c8acf6.webp' %}');"></div>
+                </button>
+              </li>
+              <li>
+                <button class="model-buttons">
+                  <div class="model-info">
+                    <p>Noovo <span>Pop</span></p>
+                    <p>starting at $174,200</p>
+                  </div>
+                  <div class="model-images" style="background-image: url('{% static 'assets/img/noovo_pop_0bc11c725f.webp' %}');"></div>
+                </button>
+              </li>
+              <li>
+                <button class="model-buttons">
+                  <div class="model-info">
+                    <p>Noovo <span>Plus LB</span></p>
+                    <p>starting at $186,700</p>
+                  </div>
+                  <div class="model-images" style="background-image: url('{% static 'assets/img/noovo_plus_984ed7c233.webp' %}');"></div>
+                </button>
+              </li>
+              <li>
+                <button class="model-buttons">
+                  <div class="model-info">
+                    <p>Noovo <span>Plus RL</span></p>
+                    <p>starting at $179,500</p>
+                  </div>
+                  <div class="model-images" style="background-image: url('{% static 'assets/img/noovo_plus_984ed7c233.webp' %}');"></div>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pick Your Exterior Color -->
+          <div class="section">
+            <h3>Pick Your Exterior Color</h3>
+            <div class="color-grid">
+              <button class="color-button">
+                <div class="color-circle" style="background-color: #b7b7b7;"></div>
+                <div class="color-info">
+                  <p>Grey</p>
+                  <p>Included</p>
+                </div>
+              </button>
+              <button class="color-button">
+                <div class="color-circle" style="background-color: #c4c4c4;"></div>
+                <div class="color-info">
+                  <p>Silver</p>
+                  <p>Included</p>
+                </div>
+              </button>
+              <button class="color-button">
+                <div class="color-circle" style="background-color: #0a0a0a;"></div>
+                <div class="color-info">
+                  <p>Granite</p>
+                  <p>Included</p>
+                </div>
+              </button>
+              <button class="color-button">
+                <div class="color-circle" style="background-color: #eae5dc;"></div>
+                <div class="color-info">
+                  <p>Sandstone</p>
+                  <p>Included</p>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Choose Your Tires -->
+          <div class="section">
+            <h3>Choose Your Tires</h3>
+            <ul class="options-list">
+              <li>
+                <button class="option-button">
+                  <div class="option-info">
+                    <p>Standard</p>
+                    <p>Included</p>
+                  </div>
+                  <p>Regular 16inch Tires</p>
+                </button>
+              </li>
+              <li>
+                <button class="option-button">
+                  <div class="option-info">
+                    <p>Off-Road Tires</p>
+                    <p>$3,500</p>
+                  </div>
+                  <p>BF Goodrich All-Terrain</p>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Choose Your Battery Pack -->
+          <div class="section">
+            <h3>Choose Your Battery Pack</h3>
+            <ul class="options-list">
+              <li>
+                <button class="option-button">
+                  <div class="option-info">
+                    <p>Standard</p>
+                    <p>Included</p>
+                  </div>
+                  <p>660Ah lithium batteries<br>For optimal comfort & living</p>
+                </button>
+              </li>
+              <li>
+                <button class="option-button">
+                  <div class="option-info">
+                    <p>Premium Battery Pack</p>
+                    <p>$10,000</p>
+                  </div>
+                  <p>1320Ah lithium batteries<br>For ultimate comfort & living</p>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Choose Your Satellite Wifi -->
+          <div class="section">
+            <h3>Choose Your Satellite Wifi</h3>
+            <ul class="options-list">
+              <li>
+                <button class="option-button">
+                  <div class="option-info">
+                    <p>Starlink Roof Mount</p>
+                    <p>$800</p>
+                  </div>
+                  <p>(installation)<br>Unlimited inland data</p>
+                </button>
+              </li>
+              <li>
+                <button class="option-button">
+                  <div class="option-info">
+                    <p>Starlink Portable</p>
+                    <p>$800</p>
+                  </div>
+                  <p>(installation)<br>Manual set up</p>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="footer">
+            <p>$179,500 or from $1,200 per month</p>
+            <p>Reserve your van today for $100</p>
+            <button class="next-step-button">Next Step</button>
+            <div class="additional-info">
+              <p>Financing up to 20 years</p>
+              <p>3-year warranty</p>
+              <p>Service in 50 states</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content for Step 2: Gears -->
+        <!-- Content for Step 2: Gears -->
+      <div class="step-content" data-step="2">
+        <h3><span>Add</span> some gears.</h3>
+        <p>Explore optional gears.</p>
+        <h3>Choose Your Outside Gears</h3>
+        <div class="gear-options">
+          <ul>
+            <li>
+              <button>
+                <div class="gear-image">
+                  <img src="https://res.cloudinary.com/ht4hxwcbr/image/upload/v1719655354/CAM3_PLUS_SANDSTONE_REGULAR_NONE_REAR_LADDER_TIRE_CARRIER.webp" alt="Combo Rear Ladder & Tire Carrier">
+                </div>
+                <div class="gear-info">
+                  <p>Combo Rear Ladder & Tire Carrier</p>
+                  <p>$2,150</p>
+                  <p>For reliable access to the roof and easy spare tire access</p>
+                </div>
+              </button>
+            </li>
+            <li>
+              <button>
+                <div class="gear-image">
+                  <img src="https://res.cloudinary.com/ht4hxwcbr/image/upload/v1719655354/CAM3_PLUS_SANDSTONE_REGULAR_NONE_REAR_BOX.webp" alt="Rear Box Storage">
+                </div>
+                <div class="gear-info">
+                  <p>Rear Box Storage</p>
+                  <p>$3,250</p>
+                  <p>For convenient and secure equipment storage</p>
+                </div>
+              </button>
+            </li>
+            <li>
+              <button>
+                <div class="gear-image">
+                  <img src="https://res.cloudinary.com/ht4hxwcbr/image/upload/v1719655354/CAM3_PLUS_SANDSTONE_REGULAR_NONE_BIKE_RACK.webp" alt="Swing Away Bike Rack">
+                </div>
+                <div class="gear-info">
+                  <p>Swing Away Bike Rack</p>
+                  <p>$1,250</p>
+                  <p>For secure bike holding & simple rear access</p>
+                </div>
+              </button>
+            </li>
+            <li>
+              <button>
+                <div class="gear-image">
+                  <img src="https://res.cloudinary.com/ht4hxwcbr/image/upload/v1719655354/CAM3_PLUS_SANDSTONE_REGULAR_NONE_REAR_BOX_REAR_LADDER_BIKE_RACK_TIRE_CARRIER.webp" alt="Combo Adventure Pack">
+                </div>
+                <div class="gear-info">
+                  <p>Combo Adventure Pack</p>
+                  <p>$6,500</p>
+                  <p>Includes bike rack, rear box storage, rear door tire carrier, and rear ladder</p>
+                </div>
+              </button>
+            </li>
+          </ul>
+        </div>
+         <div class="footer">
+      <p>$179,500 or from $1,200 per month</p>
+      <p>Reserve your van today for $100</p>
+      <button class="next-step-button">Next Step</button>
+      <div class="additional-info">
+        <p>Financing up to 20 years</p>
+        <p>3-year warranty</p>
+        <p>Service in 50 states</p>
+      </div>
+    </div>
+      </div>
+
+        <!-- Content for Step 3: Order -->
+        <div class="step-content" data-step="3">
+          <h3><span>All the options</span></h3>
+          <p>It’s made for you.</p>
+          <div class="order-options">
+            <div class="grid">
+              <button class="order-button">
+                <div class="order-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open-text">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                    <path d="M6 8h2"></path>
+                    <path d="M6 12h2"></path>
+                    <path d="M16 8h2"></path>
+                    <path d="M16 12h2"></path>
+                  </svg>
+                </div>
+                <p>Get your<br>estimate</p>
+              </button>
+              <button class="order-button">
+                <div class="order-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-clock">
+                    <path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5"></path>
+                    <path d="M16 2v4"></path>
+                    <path d="M8 2v4"></path>
+                    <path d="M3 10h5"></path>
+                    <path d="M17.5 17.5 16 16.3V14"></path>
+                    <circle cx="16" cy="16" r="6"></circle>
+                  </svg>
+                </div>
+                <p>Schedule<br>virtual tour</p>
+              </button>
+            </div>
+            <div class="order-summary">
+              <p>$179,500 or from $1,200 per month</p>
+              <p>Reserve your van today for $100</p>
+              <button class="reserve-buttons">Reserve your build</button>
+            </div>
+            <div class="order-details">
+              <p>Check the base</p>
+              <ul>
+                <li>
+                  <p>Noovo <span>Plus RL</span></p>
+                  <p>$179,500</p>
+                </li>
+                <li>
+                  <p>Sandstone paint interior</p>
+                  <p>Included</p>
+                </li>
+                <li>
+                  <p>Regular 16inch Tires</p>
+                  <p>Included</p>
+                </li>
+                <li>
+                  <p>Standard Battery Pack</p>
+                  <p>Included</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+{% endblock body %}

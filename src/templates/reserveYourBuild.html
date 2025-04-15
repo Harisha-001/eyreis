@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block body %}
+  <body>
+    <div class="container2">
+      <div class="background-image">
+        <img
+          src="https://res.cloudinary.com/ht4hxwcbr/image/upload/v1736543998/plus_d888897778.jpg"
+          alt="Noovo Plus LB"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <div class="dialog">
+        <div class="dialog-content">
+          <div class="header1">
+            <h3>Reserve <span>Noovo Plus LB</span></h3>
+            <hr />
+            <p>Pre-orders currently available in U.S. only.</p>
+          </div>
+          <div class="main-content">
+            <p>Place a fully-refundable deposit to reserve a Noovo Plus LB.</p>
+            <hr />
+            <div class="pricing">
+              <p>Transparent Pricing</p>
+              <h3>Starting at: <span>$186,700.</span></h3>
+            </div>
+          </div>
+          <div class="footer">
+            <p class="legal-text">
+              By placing a fully refundable reservation, I agree to the
+              <a href="/pre-order-agreement" title="See reservation agreement"
+                >Reservation Agreement</a
+              >
+              and confirm that I have read Noovo's
+              <a href="/terms" title="See terms">Terms of Use</a>,
+              <a href="/privacy-policy" title="See privacy policy"
+                >Privacy Policy</a
+              >
+            </p>
+            <div class="due-today">
+              <div>
+                <p>Due today</p>
+                <p class="refundable">Fully refundable</p>
+              </div>
+              <p class="amount">$100 USD</p>
+            </div>
+            <button class="reserve1-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-zap"
+              >
+                <path
+                  d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"
+                ></path>
+              </svg>
+              <div class="button-text">
+                <div >Reserve your Noovo Plus LB
+                   <svg
+                    class="arrow-icon"
+                    width="16"
+                    height="11"
+                    viewBox="0 0 16 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.667 5.72222L0.500324 5.72222ZM8.59556 10.4444L14.667 5.72222ZM8.59556 1L14.667 5.72222Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M14.667 5.72222L0.500324 5.72222M14.667 5.72222L8.59556 10.4444M14.667 5.72222L8.59556 1"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </button>
+            <a href="{% url 'home' %}" class="close-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-x"
+              >
+                <path d="M18 6 6 18"></path>
+                <path d="m6 6 12 12"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{% endblock body %}

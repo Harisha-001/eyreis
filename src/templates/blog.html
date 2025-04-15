@@ -1,0 +1,337 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block body %}
+
+    <body class="body-bg">
+
+        <!-- Preloader Start -->
+        <div id="preloader" class="preloader">
+            <div class="animation-preloader">
+                <div class="spinner">                
+                </div>
+                <div class="txt-loading">
+                    <span data-text-preloader="E" class="letters-loading">
+                        E
+                    </span>
+                    <span data-text-preloader="Y" class="letters-loading">
+                        Y
+                    </span>
+                    <span data-text-preloader="R" class="letters-loading">
+                        R
+                    </span>
+                    <span data-text-preloader="E" class="letters-loading">
+                        E
+                    </span>
+                    <span data-text-preloader="S" class="letters-loading">
+                        S
+                    </span>
+                    <span data-text-preloader="A" class="letters-loading">
+                        A
+                    </span>
+                    <span data-text-preloader="I" class="letters-loading">
+                        I
+                    </span>
+                </div>
+                <p class="text-center">Loading</p>
+            </div>
+            <div class="loader">
+                <div class="row">
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--<< Mouse Cursor Start >>-->  
+        <div class="mouse-cursor cursor-outer"></div>
+        <div class="mouse-cursor cursor-inner"></div>
+
+        <!-- Back To Top start -->
+        <button id="back-top" class="back-to-top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+        
+
+
+<!-- Header Section Start -->
+{%include 'includes/header.html' %}
+
+        <section class="blog-section section-padding">
+        <div class="container blog-container">
+            <div class="header">
+            <h1>Blog & Van Life Stories</h1>
+            <h2>For van inspiration, travel ideas, tips and tricks, or just plain awesome #vanlife stories, read on!</h2>
+            </div>
+            <div class="filter-tabs">
+            <ul>
+                <li><button class="active" data-filter="all">All</button></li>
+                <li><button data-filter="vanlife">#VanLife</button></li>
+                <li><button data-filter="reviews">Reviews</button></li>
+                <li><button data-filter="stories">Stories</button></li>
+                <li><button data-filter="diy">DIY</button></li>
+                <li><button data-filter="comparison">#Comparison</button></li>
+            </ul>
+            </div>
+            <div class="blog-grid">
+                {% for post in blog_posts %}
+                    <a href="{{ post.article_url }}" class="blog-card" data-category="{{ post.category }}">
+                        <img src="{{ post.image.url }}" alt="{{ post.title }}"> <!-- Dynamically insert the image URL -->
+                        <div class="card-content">
+                            <span class="category">{{ post.category }}</span>
+                            <div class="bottom-content">
+                                <h3>{{ post.title }}</h3>
+                                <button>See article</button>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+            
+
+    <section style="display:grid; place-items:center; margin-bottom: 50px;">
+        <div class="sliders">
+            <div class="slider-items">
+                <img src="https://www.zarla.com/images/nike-logo-2400x2400-20220504.png?crop=1:1,smart&width=150&dpr=2"
+                    alt="">
+                <img src="https://www.zarla.com/images/apple-logo-2400x2400-20220512-1.png?crop=1:1,smart&width=150&dpr=2"
+                    alt="">
+                <img src="https://www.zarla.com/images/disney-logo-2400x2400-20220513-2.png?crop=1:1,smart&width=150&dpr=2"
+                    alt="">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/Loon_%28company%29_logo.svg/800px-Loon_%28company%29_logo.svg.png"
+                    alt="">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Jumpman_logo.svg/1200px-Jumpman_logo.svg.png"
+                    alt="">
+                <img src="https://www.svgrepo.com/show/303123/bmw-logo.svg" alt="">
+                <img src="https://brandlogos.net/wp-content/uploads/2014/12/starbucks_coffee_company-logo_brandlogos.net_9jqys.png"
+                    alt="">
+                <img src="https://www.zarla.com/images/nike-logo-2400x2400-20220504.png?crop=1:1,smart&width=150&dpr=2"
+                    alt="">
+                <img src="https://www.zarla.com/images/apple-logo-2400x2400-20220512-1.png?crop=1:1,smart&width=150&dpr=2"
+                    alt="">
+                <img src="https://www.zarla.com/images/disney-logo-2400x2400-20220513-2.png?crop=1:1,smart&width=150&dpr=2"
+                    alt="">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/Loon_%28company%29_logo.svg/800px-Loon_%28company%29_logo.svg.png"
+                    alt="">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Jumpman_logo.svg/1200px-Jumpman_logo.svg.png"
+                    alt="">
+                <img src="https://www.svgrepo.com/show/303123/bmw-logo.svg" alt="">
+                <img src="https://brandlogos.net/wp-content/uploads/2014/12/starbucks_coffee_company-logo_brandlogos.net_9jqys.png"
+                    alt="">
+            </div>
+        </div>
+        <div class="cta-section">
+            <h2>Would you like to share your story with us and our community?</h2>
+            <a href="contact.html" class="cta-button">
+                Get in touch with us!
+                <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.667 5.72222L0.500324 5.72222ZM8.59556 10.4444L14.667 5.72222ZM8.59556 1L14.667 5.72222Z" fill="currentColor"></path>
+                    <path d="M14.667 5.72222L0.500324 5.72222M14.667 5.72222L8.59556 10.4444M14.667 5.72222L8.59556 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                </a>
+        </div>
+
+    </section>
+
+
+      <!-- Footer Sction Start -->
+         <!-- Footer Sction Start -->
+         <footer class="footer-section footer-bg">
+            <div class="container">
+                <div class="footer-widgets-wrapper">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                            <div class="single-footer-widget">
+                                <div class="footer-content">
+                                    <h3 class="mb-3">
+                                        Subscribe our 
+                                        newsletter
+                                    </h3>
+                                    <p style="color:#333; font-size:20px">Join us today, get update everyday</p>
+                                    <div class="footer-input">
+                                        <input type="email" id="email" placeholder="Enter email...">
+                                        <button class="newsletter-btn" type="submit">
+                                           <img src="assets/img/circle-check.png" alt="img">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp" data-wow-delay=".4s">
+                            <div class="single-footer-widget">
+                                <div class="widget-head">
+                                    <h3>Company</h3>
+                                </div>
+                                <ul class="list-items">
+                                    <li>
+                                        <a href="about.html"> 
+                                            About us
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html"> 
+                                            Opportunity
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html"> 
+                                            Events
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html"> 
+                                            Consulting
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="news.html"> 
+                                            Our blog
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html"> 
+                                            Contact us
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html"> 
+                                            Careers
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="login.html"> 
+                                            User login
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp" data-wow-delay=".6s">
+                            <div class="single-footer-widget">
+                                <div class="widget-head">
+                                    <h3>Company</h3>
+                                </div>
+                                <ul class="list-items">
+                                    <li>
+                                        <a href="service.html"> 
+                                            Graphic design
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="service.html"> 
+                                            Marketing
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="service.html"> 
+                                            Photography
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="service.html"> 
+                                            Art generate
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="service.html"> 
+                                            Face swap
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="service.html"> 
+                                            Interior design
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="service.html"> 
+                                            Face swap
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="service.html"> 
+                                            Mockup create
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 ps-lg-3 wow fadeInUp" data-wow-delay=".8s">
+                            <div class="single-footer-widget">
+                                <div class="widget-head">
+                                    <h3>Instagram</h3>
+                                </div>
+                                <div class="row g-3">
+                                    <div class="col-md-6 col-sm-4 col-4">
+                                        <div class="footer-thumb">
+                                            <img src="assets/img/footer/gallery-1.jpg" alt="img">
+                                            <a href="index.html" class="icon">
+                                                <i class="fa-brands fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-4 col-4">
+                                        <div class="footer-thumb">
+                                            <img src="assets/img/footer/gallery-2.jpg" alt="img">
+                                            <a href="index.html" class="icon">
+                                                <i class="fa-brands fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-4 col-4">
+                                        <div class="footer-thumb">
+                                            <img src="assets/img/footer/gallery-3.jpg" alt="img">
+                                            <a href="index.html" class="icon">
+                                                <i class="fa-brands fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-4 col-4">
+                                        <div class="footer-thumb">
+                                            <img src="assets/img/footer/gallery-4.jpg" alt="img">
+                                            <a href="index.html" class="icon">
+                                                <i class="fa-brands fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-bottom-wrapper">
+                        <div class="logo-img wow fadeInUp" data-wow-delay=".3s" style="display: flex; justify-content: center;align-items: center;">
+                            
+                            
+                           <a href="index.html">
+                                <img src="assets/img/logo/EyresAI-logo.png" alt="logo-img" width="80px" height="100px">
+                           </a>
+                           <p class=" fadeInUp" data-wow-delay=".5s">EyresAI © 2024. All Rights Reserved.</p>
+                        </div>
+                        
+                       <div class="social-icon wow fadeInUp" data-wow-delay=".7s">
+                            <a href="index.html">Home</a>
+                            <a href="about.html">About</a>
+                            <a href="inventory.html">projects</a>
+                            <a href="blog.html">Blog</a>
+                             <a href="contact.html">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+{% endblock body %}

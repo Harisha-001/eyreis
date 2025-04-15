@@ -1,0 +1,520 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+ 
+{% load static %}
+ 
+{% load bootstrap4 %}
+
+{% block body %}
+
+    <body class="body-bg">
+
+        <!-- Preloader Start -->
+        <div id="preloader" class="preloader">
+            <div class="animation-preloader">
+                <div class="spinner">                
+                </div>
+              <div class="txt-loading">
+                    <span data-text-preloader="A" class="letters-loading">
+                        E
+                    </span>
+                    <span data-text-preloader="I" class="letters-loading">
+                        Y
+                    </span>
+                    <span data-text-preloader="F" class="letters-loading">
+                        R
+                    </span>
+                    <span data-text-preloader="O" class="letters-loading">
+                        E
+                    </span>
+                    <span data-text-preloader="R" class="letters-loading">
+                        S
+                    </span>
+                    <span data-text-preloader="G" class="letters-loading">
+                        A
+                    </span>
+                    <span data-text-preloader="E" class="letters-loading">
+                        I
+                    </span>
+                </div>
+                <p class="text-center">Loading</p>
+            </div>
+            <div class="loader">
+                <div class="row">
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--<< Mouse Cursor Start >>-->  
+        <div class="mouse-cursor cursor-outer"></div>
+        <div class="mouse-cursor cursor-inner"></div>
+
+        <!-- Back To Top start -->
+        <button id="back-top" class="back-to-top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+
+<!-- Header Section Start -->
+<header id="header-sticky" class="header-1">
+    <div class="container-fluid">
+        <div class="mega-menu-wrapper">
+            <div class="header-main">
+                <div class="header-left">
+                    <div class="mean__menu-wrapper">
+                        <div class="main-menu">
+                            <nav id="mobile-menu">
+                                <ul>
+                                    <li class="has-dropdown">
+                                        <a href="{% url 'home' %}">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'about' %}">About Us</a>
+                                    </li>
+                                    <li class="has-dropdown">
+                                        <a href="#" class="dropdown-toggle" id="our-modals-toggle">Our Modals</a>
+                                        <ul class="dropdown" style="display: none;">
+                                            <!-- Add the custom nav-menu here -->
+                                            <li>
+                                                <nav class="nav-menu" id="nav-menu">
+                                                    <div class="nav-container" style="display:flex; justify-content: center; gap: 20px;">
+                                                        <div class="nav-left">
+                                                            <div class="nav-content">
+                                                                <p class="nav-title">Our Models</p>
+                                                                <p class="nav-description">Custom-built in America with <br>European craftsmanship, modern design <br> and the comforts of home.</p>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="nav-grid" style="display: flex; justify-content: center;">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="/noovo-lite/">
+                                                                    <div class="nav-text">
+                                                                        <p class="nav-model">Noovo <span>Lite</span></p>
+                                                                        <p class="nav-price">Starts at $162,700<br>or from <span>$1,087/mo</span></p>
+                                                                    </div>
+                                                                    <div class="nav-image" style="background-image: url('https://res.cloudinary.com/ht4hxwcbr/image/upload/v1725101378/large_19cd5db746c2179d89f26cbb409ac073_6c15af1f32.webp');"></div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="/noovo-pop/">
+                                                                    <div class="nav-text">
+                                                                        <p class="nav-model">Noovo <span>Pop</span></p>
+                                                                        <p class="nav-price">Starts at $174,200<br>or from <span>$1,164/mo</span></p>
+                                                                    </div>
+                                                                    <div class="nav-image" style="background-image: url('https://res.cloudinary.com/ht4hxwcbr/image/upload/v1725101381/large_5b3d9635fe523f3f371779619e8a3431_4ab50bbbaf.webp');"></div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="/noovo-plus/">
+                                                                    <div class="nav-text">
+                                                                        <p class="nav-model">Noovo <span>Plus</span></p>
+                                                                        <p class="nav-price">Starts at $186,700<br>or from <span>$1,248/mo</span></p>
+                                                                    </div>
+                                                                    <div class="nav-image" style="background-image: url('https://res.cloudinary.com/ht4hxwcbr/image/upload/v1725101378/large_396471adbfd8d579ca1ace00c9ef6964_523dda1a97.webp');"></div>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </nav>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="{% url 'inventory' %}">Inventory</a></li>
+                                    <li><a href="event.html">Event</a></li>
+                                    <li><a href="{% url 'blog' %}">Blog</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="logo">
+                    <a href="index.html" class="header-logo">
+                        <img src="/static/assets/img/logo/eyres 1.png" alt="logo-img" width="150px" height="120px">
+                    </a>
+                </div>
+                <div class="header-right d-flex justify-content-end align-items-center">
+                    <a href="{% url 'Contact' %}" class="join-text button"> Contact</a>
+                    <a href="{% url 'Contact' %}" class="join-text button"> Build your product <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <!-- Search Area Start -->
+        <div class="search-wrap">
+            <div class="search-inner">
+                <i class="fas fa-times search-close" id="search-close"></i>
+                <div class="search-cell">
+                    <form method="get">
+                        <div class="search-field-holder">
+                            <input type="search" class="main-search-input" placeholder="Search...">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+       <!-- Contact Sction Start -->
+       <section class="contact-section fix style-padding section-padding bg-cover" style="background-image: url('assets/img/contact-bg.jpg');">
+            <div class="container">
+                <div class="section-title ml-200">
+                    <h6 class="wow fadeInUp">
+                        <img src="{% static 'assets/img/star.png' %}" alt="img" width="20px" height="20px"> Contact with us
+                    </h6>
+                    <h2 class="wow fadeInUp" data-wow-delay=".3s">
+                        Contact our experts <br> <span>any <b>assistance</b> you need</span>
+                    </h2>
+                </div>
+                <div class="contact-wrapper">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+                            <div class="contact-image">
+                                <img src="{% static 'assets/img/contac-img-2.jpg' %}" alt="Contact Image" width="150px" height="120px">
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="contact-form-items-area">
+                                <h2 class="wow fadeInUp" data-wow-delay=".3s">Get in touch</h2>
+                                <form action="contact.php" id="contact-form" method="POST" class="contact-form-items">
+                                    <div class="row g-4">
+                                        <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                            <div class="form-clt">
+                                                <div class="icon">
+                                                    <i class="fa-regular fa-user"></i>
+                                                </div>
+                                                <input type="text" name="name" id="name" placeholder="Your name">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                            <div class="form-clt">
+                                                <div class="icon">
+                                                    <i class="fa-solid fa-phone"></i>
+                                                </div>
+                                                <input type="text" name="phone" id="phone" placeholder="Phone">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                            <div class="form-clt">
+                                                <div class="icon">
+                                                    <i class="fa-regular fa-envelope"></i>
+                                                </div>
+                                                <input type="text" name="email" id="email12" placeholder="Email here">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                            <div class="form-clt">
+                                                <div class="nice-select" tabindex="0">
+                                                    <span class="current">
+                                                        Subject
+                                                    </span>
+                                                    <ul class="list">
+                                                        <li data-value="1" class="option selected">
+                                                           01
+                                                        </li>
+                                                        <li data-value="1" class="option">
+                                                           02
+                                                        </li>
+                                                        <li data-value="1" class="option">
+                                                           03
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 wow fadeInUp" data-wow-delay=".3s">
+                                            <div class="form-clt">
+                                                <textarea name="message" id="message" placeholder="Write your comment"></textarea>
+                                                <div class="icon">
+                                                    <i class="fa-regular fa-comment"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-7 wow fadeInUp" data-wow-delay=".5s">
+                                            <button type="submit" class="theme-btn">
+                                                Send message<i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </section>
+
+        <!-- Map Sction Start -->
+        <div class="map-items">
+            <div class="googpemap">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12294.66531968287!2d77.592637!3d12.9127254!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae150060f78f9f%3A0xa17af3c4dfdf9b2c!2sEyRes.AI%20Solutions%20Private%20Limited!5e1!3m2!1sen!2sin!4v1732778644181!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <section class="contact-info-section fix section-padding">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h6 class="wow fadeInUp">
+                        <img src="{% static 'assets/img/star.png' %}" alt="img" width="20px" height="20px"> Quick support info
+                    </h6>
+                    <h2 class="wow fadeInUp" data-wow-delay=".3s">
+                        Contact <span><b>information</b></span>
+                    </h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s" >
+                        <div class="contact-box-items-4">
+                            <div class="icon">
+                                <i class="fa-solid fa-light fa-location-dot"></i>
+                            </div>
+                            <div class="content">
+                                <h3>Location</h3>
+                                <p>
+                                    12,3rd A Cross, 2nd Main Rd, KSRTC Layout, 2nd Phase, J. P. Nagar, Bengaluru, Karnataka 560078
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="contact-box-items-4">
+                            <div class="icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="content">
+                                <h3>Email us</h3>
+                                <p><a href="mailto:info@example.com">info@example.com</a></p>
+                                <p><a href="mailto:info@example.com">info@example.com</a></p>
+                            </div>
+                        
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".6s">
+                        <div class="contact-box-items-4">
+                            <div class="icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="content">
+                                <h3>Free call</h3>
+                                <p><a href="tel:+023133695329">+02 (313) 369 5329</a></p>
+                                <p><a href="tel:+023133695329">+02 (313) 369 5329</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".8s">
+                        <div class="contact-box-items-4">
+                            <div class="icon">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <div class="content">
+                                <h3>Opening hour</h3>
+                                <p>
+                                    Sun to Fri: 09AM - 5PM
+                                    Saturday: Closed
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      <!-- Footer Sction Start -->
+        <footer class="footer-section footer-bg">
+            <div class="container">
+                <div class="footer-widgets-wrapper">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                            <div class="single-footer-widget">
+                                <div class="footer-content">
+                                    <h3 class="mb-3">
+                                        Subscribe our 
+                                        newsletter
+                                    </h3>
+                                    <p style="color:#333; font-size:20px">Join us today, get update everyday</p>
+                                    <div class="footer-input">
+                                        <input type="email" id="email" placeholder="Enter email...">
+                                        <button class="newsletter-btn" type="submit">
+                                            <img src="{% static 'assets/img/circle-check.png' %}" alt="img" width="20px" height="20px">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp" data-wow-delay=".4s">
+                            <div class="single-footer-widget">
+                                <div class="widget-head">
+                                    <h3>Company</h3>
+                                </div>
+                                <ul class="list-items">
+                                    <li>
+                                        <a href="about.html"> 
+                                            About us
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html"> 
+                                            Opportunity
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html"> 
+                                            Events
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html"> 
+                                            Consulting
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="news.html"> 
+                                            Our blog
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html"> 
+                                            Contact us
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html"> 
+                                            Careers
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="login.html"> 
+                                            User login
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp" data-wow-delay=".6s">
+                            <div class="single-footer-widget">
+                                <div class="widget-head">
+                                    <h3>Company</h3>
+                                </div>
+                                <ul class="list-items">
+                                    <li>
+                                        <a href="service.html"> 
+                                            Graphic design
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="service.html"> 
+                                            Marketing
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="service.html"> 
+                                            Photography
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="service.html"> 
+                                            Art generate
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="service.html"> 
+                                            Face swap
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="service.html"> 
+                                            Interior design
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="service.html"> 
+                                            Face swap
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="service.html"> 
+                                            Mockup create
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 ps-lg-3 wow fadeInUp" data-wow-delay=".8s">
+                            <div class="single-footer-widget">
+                                <div class="widget-head">
+                                    <h3>Instagram</h3>
+                                </div>
+                                <div class="row g-3">
+                                    <div class="col-md-6 col-sm-4 col-4">
+                                        <div class="footer-thumb">
+                                            <img src="{% static 'assets/img/footer/gallery-1.jpg' %}" alt="img" width="150px" height="120px">
+                                            <a href="index.html" class="icon">
+                                                <i class="fa-brands fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-4 col-4">
+                                        <div class="footer-thumb">
+                                            <img src="{% static 'assets/img/footer/gallery-2.jpg' %}" alt="img" width="150px" height="120px">
+                                            <a href="index.html" class="icon">
+                                                <i class="fa-brands fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-4 col-4">
+                                        <div class="footer-thumb">
+                                            <img src="{% static 'assets/img/footer/gallery-3.jpg' %}" alt="img" width="150px" height="120px">
+                                            <a href="index.html" class="icon">
+                                                <i class="fa-brands fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-4 col-4">
+                                        <div class="footer-thumb">
+                                            <img src="{% static 'assets/img/footer/gallery-4.jpg' %}" alt="img" width="150px" height="120px">
+                                            <a href="index.html" class="icon">
+                                                <i class="fa-brands fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-bottom-wrapper">
+                        <div class="logo-img wow fadeInUp" data-wow-delay=".3s" style="display: flex; justify-content: center;align-items: center;">
+                            
+                            
+                           <a href="index.html">
+                            <img src="{% static 'assets/img/logo/EyresAI-logo.png' %}" alt="logo-img" width="80px" height="100px">
+                           </a>
+                           <p class=" fadeInUp" data-wow-delay=".5s">EyresAI © 2024. All Rights Reserved.</p>
+                        </div>
+                        
+                        <div class="social-icon wow fadeInUp" data-wow-delay=".7s">
+                            <a href="index.html">Home</a>
+                            <a href="about.html">About</a>
+                            <a href="service.html">Service</a>
+                            <a href="project.html">Portfolio</a>
+                            <a href="news.html">Blog</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+{% endblock body %}

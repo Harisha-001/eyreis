@@ -1,0 +1,728 @@
+{% extends 'base.html' %}
+ 
+{% load static %}
+
+{% load bootstrap4 %}
+  
+{% block body %} 
+
+    <body class="body-bg">
+
+        <!-- Preloader Start -->
+        <div id="preloader" class="preloader">
+            <div class="animation-preloader">
+                <div class="spinner">                
+                </div>
+              <div class="txt-loading">
+                    <span data-text-preloader="A" class="letters-loading">
+                        E
+                    </span>
+                    <span data-text-preloader="I" class="letters-loading">
+                        Y
+                    </span>
+                    <span data-text-preloader="F" class="letters-loading">
+                        R
+                    </span>
+                    <span data-text-preloader="O" class="letters-loading">
+                        E
+                    </span>
+                    <span data-text-preloader="R" class="letters-loading">
+                        S
+                    </span>
+                    <span data-text-preloader="G" class="letters-loading">
+                        A
+                    </span>
+                    <span data-text-preloader="E" class="letters-loading">
+                        I
+                    </span>
+                </div>
+                <p class="text-center">Loading</p>
+            </div>
+            <div class="loader">
+                <div class="row">
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--<< Mouse Cursor Start >>-->  
+        <div class="mouse-cursor cursor-outer"></div>
+        <div class="mouse-cursor cursor-inner"></div>
+
+        <!-- Back To Top start -->
+        <button id="back-top" class="back-to-top">
+           <i class="fa-solid fa-arrow-up"></i>
+        </button>
+
+
+
+<!-- Header Section Start -->
+<header id="header-sticky" class="header-1">
+    <div class="container-fluid">
+        <div class="mega-menu-wrapper">
+            <div class="header-main">
+                <div class="header-left">
+                    <div class="mean__menu-wrapper">
+                        <div class="main-menu">
+                            <nav id="mobile-menu">
+                                <ul>
+                                    <li class="has-dropdown">
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="about.html">About Us</a>
+                                    </li>
+                                    <li class="has-dropdown">
+                                        <a href="#" class="dropdown-toggle" id="our-modals-toggle">Our Modals</a>
+                                        <ul class="dropdown" style="display: none;">
+                                            <!-- Add the custom nav-menu here -->
+                                            <li>
+                                                <nav class="nav-menu" id="nav-menu">
+                                                    <div class="nav-container" style="display:flex; justify-content: center; gap: 20px;">
+                                                        <div class="nav-left">
+                                                            <div class="nav-content">
+                                                                <p class="nav-title">Our Models</p>
+                                                                <p class="nav-description">Custom-built in America with <br>European craftsmanship, modern design <br> and the comforts of home.</p>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="nav-grid" style="display: flex; justify-content: center;">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="/noovo-lite/">
+                                                                    <div class="nav-text">
+                                                                        <p class="nav-model">Noovo <span>Lite</span></p>
+                                                                        <p class="nav-price">Starts at $162,700<br>or from <span>$1,087/mo</span></p>
+                                                                    </div>
+                                                                    <div class="nav-image" style="background-image: url('https://res.cloudinary.com/ht4hxwcbr/image/upload/v1725101378/large_19cd5db746c2179d89f26cbb409ac073_6c15af1f32.webp');"></div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="/noovo-pop/">
+                                                                    <div class="nav-text">
+                                                                        <p class="nav-model">Noovo <span>Pop</span></p>
+                                                                        <p class="nav-price">Starts at $174,200<br>or from <span>$1,164/mo</span></p>
+                                                                    </div>
+                                                                    <div class="nav-image" style="background-image: url('https://res.cloudinary.com/ht4hxwcbr/image/upload/v1725101381/large_5b3d9635fe523f3f371779619e8a3431_4ab50bbbaf.webp');"></div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="/noovo-plus/">
+                                                                    <div class="nav-text">
+                                                                        <p class="nav-model">Noovo <span>Plus</span></p>
+                                                                        <p class="nav-price">Starts at $186,700<br>or from <span>$1,248/mo</span></p>
+                                                                    </div>
+                                                                    <div class="nav-image" style="background-image: url('https://res.cloudinary.com/ht4hxwcbr/image/upload/v1725101378/large_396471adbfd8d579ca1ace00c9ef6964_523dda1a97.webp');"></div>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </nav>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="inventory.html">Inventory</a></li>
+                                    <li><a href="event.html">Event</a></li>
+                                    <li><a href="news.html">Blog</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="logo">
+                    <a href="index.html" class="header-logo">
+                        <img src="assets/img/logo/eyres 1.png" alt="logo-img" width="150px" height="120px">
+                    </a>
+                </div>
+                <div class="header-right d-flex justify-content-end align-items-center">
+                    <a href="Contact.html" class="join-text button"> Contact</a>
+                    <a href="Contact.html" class="join-text button"> Build your product <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+   
+<section class="events-section " style="margin-top: 150px;">
+  <div class="events-container">
+    <div class="events-header">
+      <h1 class="events-title">2025 Van Events & Gatherings</h1>
+      <h2 class="events-subtitle">
+        Enjoy camper van workshops, live music, family-friendly fun,<br>
+        and so much more at these amazing vanlife meetups!<br>
+        Stay tuned - more events are coming up this year!
+      </h2>
+    </div>
+    <ul class="events-grid">
+      <!-- Event 1 -->
+      <li class="event-card">
+        <a href="/van-events/ocala-rv-show" target="_blank" title="Go to event page" class="event-link">
+          <div class="event-image">
+            <img src="https://res.cloudinary.com/ht4hxwcbr/image/upload/v1740508882/41744_C40_363_D_454_C_B544_73_D481_E0249_F_1_105_c_c4071c9d8a.webp" alt="Ocala RV Show" width="200px" height="200px"> 
+          </div>
+          <div class="event-content">
+            <div class="event-tag">Past</div>
+            <div class="event-details">
+              <p class="event-date">March 06-09</p>
+              <p class="event-name">Ocala RV Show</p>
+              <h3 class="event-location">Ocala, Florida</h3>
+            </div>
+            <p class="event-description">
+              Come join us from March 6 to 9 for a family-friendly weekend open to all ages celebrating the van life community and the opportunity to view our Noovo vans and our team!
+            </p>
+          </div>
+        </a>
+      </li>
+      <!-- Event 2 -->
+      <li class="event-card">
+        <a href="/van-events/peace-love-and-vans-florida" target="_blank" title="Go to event page" class="event-link">
+          <div class="event-image">
+            <img src="https://res.cloudinary.com/ht4hxwcbr/image/upload/v1739812546/2350288cba96bb2bbbfcc52143b961de_5312c9edf3.webp" alt="Peace Love & Vans Florida" width="200px" height="200px">
+          </div>
+          <div class="event-content">
+            <div class="event-tag">Past</div>
+            <div class="event-details">
+              <p class="event-date">March 07-10</p>
+              <p class="event-name">Peace Love & Vans Florida!</p>
+              <h3 class="event-location">Withlacoochee River Park, Florida</h3>
+            </div>
+            <p class="event-description">
+              Join us from March 7 to 10 for a fun. This event celebrates the vibrant van life community and gives you the chance to check out our Noovo vans and meet our awesome team.
+            </p>
+          </div>
+        </a>
+      </li>
+      <!-- Event 3 -->
+      <li class="event-card">
+        <a href="/van-events/noovo-open-house" target="_blank" title="Go to event page" class="event-link">
+          <div class="event-image">
+            <img src="https://res.cloudinary.com/ht4hxwcbr/image/upload/v1736293053/DSC_2385_0da8e3604d.webp" alt="Noovo Open House" width="200px" height="200px">
+          </div>
+          <div class="event-content">
+            <div class="event-details">
+              <p class="event-date">April 05-06</p>
+              <p class="event-name">Open House</p>
+              <h3 class="event-location">Las Vegas, NV</h3>
+            </div>
+            <p class="event-description">
+              Get an exclusive look at 2025 Noovo vans, meet other van life enthusiasts, and be part of our growing community.
+            </p>
+            <p class="event-more">View more</p>
+          </div>
+        </a>
+      </li>
+      <!-- Event 4 -->
+      <li class="event-card">
+        <a href="https://adventurevanexpo.com/ventura-ca/" target="_blank" title="Go to event page" class="event-link">
+          <div class="event-image">
+            <img src="https://res.cloudinary.com/ht4hxwcbr/image/upload/v1726405732/41744_C40_363_D_454_C_B544_73_D481_E0249_F_1_105_c_d9a722576a.webp" alt="Adventure Van Expo" width="200px" height="200px">
+          </div>
+          <div class="event-content">
+            <div class="event-details">
+              <p class="event-date">May 09-10</p>
+              <p class="event-name">Adventure Van Expo</p>
+              <h3 class="event-location">Ventura, California</h3>
+            </div>
+            <p class="event-description">
+              Join us on May 9 and 10 for a fun-filled, family-friendly weekend! This event offers an exciting opportunity to explore our Noovo vans and meet our amazing team.
+            </p>
+            <p class="event-more">View more</p>
+          </div>
+        </a>
+      </li>
+      <!-- Event 5 -->
+      <li class="event-card">
+        <a href="https://adventurevanexpo.com/palisades-tahoe-ca/" target="_blank" title="Go to event page" class="event-link">
+          <div class="event-image">
+            <img src="https://res.cloudinary.com/ht4hxwcbr/image/upload/v1738889026/IMG_2491_1_b04d1ed831.webp" alt="Van Expo Tahoe" width="200px" height="200px">
+          </div>
+          <div class="event-content">
+            <div class="event-details">
+              <p class="event-date">September 20-21</p>
+              <p class="event-name">Van Expo</p>
+              <h3 class="event-location">Tahoe, California</h3>
+            </div>
+            <p class="event-description">
+              Come and meet us at this legendary show, and discover our sublime vans and our friendly team!
+            </p>
+            <p class="event-more">View more</p>
+          </div>
+        </a>
+      </li>
+      <!-- Event 6 -->
+      <li class="event-card">
+        <a href="https://adventurevanexpo.com/san-juan-capistrano-ca/" target="_blank" title="Go to event page" class="event-link">
+          <div class="event-image">
+            <img src="https://res.cloudinary.com/ht4hxwcbr/image/upload/v1738889208/Plus055_vzh_b9ce7e3e4e.webp" alt="Van Expo San Juan Capistrano" width="200px" height="200px">
+          </div>
+          <div class="event-content">
+            <div class="event-details">
+              <p class="event-date">October 04-05</p>
+              <p class="event-name">Van Expo</p>
+              <h3 class="event-location">San Juan Capistrano, California</h3>
+            </div>
+            <p class="event-description">
+              Come and see us for an unforgettable experience in our vans and meet our magnificent team!
+            </p>
+            <p class="event-more">View more</p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+        <!-- Service Sction Start -->
+        <section class="service-section fix section-padding " style="background-image: url('assets/img/vanImage.gif'); 
+                                                                            background-size: contain; 
+                                                                            background-position: 0 150px; 
+                                                                            height: 1000px;
+                                                                            width: 100%;
+                                                                            background-repeat: no-repeat;
+                                                                            align-items: center; 
+                                                                            padding-bottom: 20px; ">
+            <div class="container" >
+                <div class="section-title text-center"  >
+                    <h6 class=" fadeInUp ">
+                        <img src="assets/img/star.png" alt="img">
+                        popular services
+                    </h6>
+                    <h3 class=" fadeInUp  font-general font-[400] text-[30px] lg:text-[60px] leading-[30px] lg:leading-[60px] tracking-[-1.2px] lg:tracking-[-2.5px] text-white text-center" data-wow-delay=".3s">
+                        Exclusive AI-powered <br>
+                        <span>idea & <b>automation</b> services</span>
+                    </h3> 
+                    <div class="slide-buttons">
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                        <a href="#" class="btn btn-secondary">Get Started</a>
+                    </div>
+                </div>
+              
+            </div>
+        </section>
+
+        <section class="models-section">
+          <div class="models-container">
+            <div class="models-header">
+              <h2 class="models-title">
+                <span>We build camper vans<br>people </span>
+                <span class="highlight">actually</span>
+                <span> want to live in.</span>
+              </h2>
+            </div>
+            <ul class="models-grid">
+              <!-- Model 1: Noovo Lite -->
+              <li class="model-card">
+                <div class="model-image" style="background-image: url('https://res.cloudinary.com/ht4hxwcbr/image/upload/v1725101378/19cd5db746c2179d89f26cbb409ac073_6c15af1f32.webp');"></div>
+                <div class="model-content">
+                  <h3 class="model-name">Noovo <span>Lite</span></h3>
+                  <p class="model-price">Starts at $162,700<br>or from <span>$1,087/mo</span></p>
+                  <ul class="model-actions">
+                    <li>
+                    <a href="#" class="model-button black">
+                            <span>Build yours</span>
+                            <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.667 5.72222L0.500324 5.72222ZM8.59556 10.4444L14.667 5.72222ZM8.59556 1L14.667 5.72222Z" fill="currentColor"></path>
+                            <path d="M14.667 5.72222L0.500324 5.72222M14.667 5.72222L8.59556 10.4444M14.667 5.72222L8.59556 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                    <a href="#" class="model-button white">
+                            <span>See inventory</span>
+                            <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.667 5.72222L0.500324 5.72222ZM8.59556 10.4444L14.667 5.72222ZM8.59556 1L14.667 5.72222Z" fill="currentColor"></path>
+                            <path d="M14.667 5.72222L0.500324 5.72222M14.667 5.72222L8.59556 10.4444M14.667 5.72222L8.59556 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- Model 2: Noovo Pop -->
+              <li class="model-card">
+                <div class="model-image" style="background-image: url('https://res.cloudinary.com/ht4hxwcbr/image/upload/v1725101381/5b3d9635fe523f3f371779619e8a3431_4ab50bbbaf.webp');"></div>
+                <div class="model-content">
+                  <h3 class="model-name">Noovo <span>Pop</span></h3>
+                  <p class="model-price">Starts at $174,200<br>or from <span>$1,164/mo</span></p>
+                  <ul class="model-actions">
+                    <li>
+                    <a href="#" class="model-button black">
+                            <span>Build yours</span>
+                            <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.667 5.72222L0.500324 5.72222ZM8.59556 10.4444L14.667 5.72222ZM8.59556 1L14.667 5.72222Z" fill="currentColor"></path>
+                            <path d="M14.667 5.72222L0.500324 5.72222M14.667 5.72222L8.59556 10.4444M14.667 5.72222L8.59556 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                    <a href="#" class="model-button white">
+                            <span>See inventory</span>
+                            <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.667 5.72222L0.500324 5.72222ZM8.59556 10.4444L14.667 5.72222ZM8.59556 1L14.667 5.72222Z" fill="currentColor"></path>
+                            <path d="M14.667 5.72222L0.500324 5.72222M14.667 5.72222L8.59556 10.4444M14.667 5.72222L8.59556 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- Model 3: Noovo Plus -->
+              <li class="model-card">
+                <div class="model-image" style="background-image: url('https://res.cloudinary.com/ht4hxwcbr/image/upload/v1725101378/396471adbfd8d579ca1ace00c9ef6964_523dda1a97.webp');"></div>
+                <div class="model-content">
+                  <h3 class="model-name">Noovo <span>Plus</span></h3>
+                  <p class="model-price">Starts at $186,700<br>or from <span>$1,248/mo</span></p>
+                  <ul class="model-actions">
+                    <li>
+                    <a href="#" class="model-button black">
+                            <span>Build yours</span>
+                            <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.667 5.72222L0.500324 5.72222ZM8.59556 10.4444L14.667 5.72222ZM8.59556 1L14.667 5.72222Z" fill="currentColor"></path>
+                            <path d="M14.667 5.72222L0.500324 5.72222M14.667 5.72222L8.59556 10.4444M14.667 5.72222L8.59556 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                    <a href="#" class="model-button white">
+                            <span>See inventory</span>
+                            <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.667 5.72222L0.500324 5.72222ZM8.59556 10.4444L14.667 5.72222ZM8.59556 1L14.667 5.72222Z" fill="currentColor"></path>
+                            <path d="M14.667 5.72222L0.500324 5.72222M14.667 5.72222L8.59556 10.4444M14.667 5.72222L8.59556 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- Model 4: Our Vans for Sale -->
+              <li class="model-card full-inventory">
+                <div class="model-image" style="background-image: url('https://res.cloudinary.com/ht4hxwcbr/image/upload/v1725352734/Our_Vans_for_sale_0c4e42c0c6.webp');"></div>
+                <div class="model-overlay"></div>
+                <div class="model-content">
+                  <h3 class="model-name">Our Vans for Sale</h3>
+                  <div class="model-actions">
+                    <a href="#" class="model-button white">
+                            <span>See full inventory</span>
+                            <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.667 5.72222L0.500324 5.72222ZM8.59556 10.4444L14.667 5.72222ZM8.59556 1L14.667 5.72222Z" fill="currentColor"></path>
+                            <path d="M14.667 5.72222L0.500324 5.72222M14.667 5.72222L8.59556 10.4444M14.667 5.72222L8.59556 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+    <section class="paralax-section fix section-padding pt-0">
+        <div  style="background-image: url('assets/img/van-image.webp'); 
+                                                                              background-size: cover; 
+                                                                                background-position: center; 
+                                                                                background-repeat: no-repeat;
+                                                                                height: 700px;
+                                                                                width: 100%;
+                                                                                position: relative;
+                                                                                display: flex;
+                                                                                justify-content: center;  /* Centers horizontally */
+                                                                                align-items: center;      /* Centers vertically */
+                                                                                text-align: center;
+                                                                                padding-bottom: 20px;">
+            <div class="paralax-image container ">
+                <h2 class="section-h2" style="color: white; font-size: 66px; font-weight: bold; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);" >Experience the Noovo 
+                <br/> life for a weekend.</h2>
+                 <div class="slide-buttons" style="display: flex; justify-content: center; align-items: center ; gap: 20px;">      
+                    <a href="#" class="model-button black">
+                    <span>Learn More</span>
+                        <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.667 5.72222L0.500324 5.72222ZM8.59556 10.4444L14.667 5.72222ZM8.59556 1L14.667 5.72222Z" fill="currentColor"></path>
+                        <path d="M14.667 5.72222L0.500324 5.72222M14.667 5.72222L8.59556 10.4444M14.667 5.72222L8.59556 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </a>
+                      <a href="#" class="model-button white">
+                          <span>Get Started</span>
+                          <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14.667 5.72222L0.500324 5.72222ZM8.59556 10.4444L14.667 5.72222ZM8.59556 1L14.667 5.72222Z" fill="currentColor"></path>
+                          <path d="M14.667 5.72222L0.500324 5.72222M14.667 5.72222L8.59556 10.4444M14.667 5.72222L8.59556 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+                      </a>
+                </div>
+            </div>
+        </div>
+      </section>
+              <!-- Faq Sction Start -->
+      <section class="faq-section">
+            <div class="faq-container">
+                <div class="faq-header">
+                <h2>Frequently Asked Questions</h2>
+                </div>
+                <ul class="faq-list">
+                <li class="faq-item">
+                    <button class="faq-question">
+                    <div class="question-content">
+                        <h3>Can I rent before I buy?</h3>
+                        <div class="icon">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="1" d="M10.152 17.5H7.848V9.99395H0V7.97177H7.848V0.5H10.152V7.97177H18V9.99395H10.152V17.5Z" fill="currentColor"></path>
+                        </svg>
+                        </div>
+                    </div>
+                    </button>
+                    <div class="faq-answer">
+                    <p>Yes, we offer rental options so you can try before you buy. Contact us for more details.</p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question">
+                    <div class="question-content">
+                        <h3>Do you have any used vans for sale?</h3>
+                        <div class="icon">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="1" d="M10.152 17.5H7.848V9.99395H0V7.97177H7.848V0.5H10.152V7.97177H18V9.99395H10.152V17.5Z" fill="currentColor"></path>
+                        </svg>
+                        </div>
+                    </div>
+                    </button>
+                    <div class="faq-answer">
+                    <p>Yes, we have a selection of used vans available. Check out our inventory for more details.</p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question">
+                    <div class="question-content">
+                        <h3>How much are the taxes?</h3>
+                        <div class="icon">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="1" d="M10.152 17.5H7.848V9.99395H0V7.97177H7.848V0.5H10.152V7.97177H18V9.99395H10.152V17.5Z" fill="currentColor"></path>
+                        </svg>
+                        </div>
+                    </div>
+                    </button>
+                    <div class="faq-answer">
+                    <p>Taxes depend on your location and the type of van you purchase. Contact us for a detailed breakdown.</p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question">
+                    <div class="question-content">
+                        <h3>Do you build custom vans?</h3>
+                        <div class="icon">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="1" d="M10.152 17.5H7.848V9.99395H0V7.97177H7.848V0.5H10.152V7.97177H18V9.99395H10.152V17.5Z" fill="currentColor"></path>
+                        </svg>
+                        </div>
+                    </div>
+                    </button>
+                    <div class="faq-answer">
+                    <p>Yes, we specialize in custom van builds. Let us know your requirements, and we'll create a van tailored to your needs.</p>
+                    </div>
+                </li>
+                </ul>
+                <div class="faq-footer">
+                <a href="/faq/" class="read-more-button">
+                    <span>Read more FAQs</span>
+                    <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.667 5.72222L0.500324 5.72222ZM8.59556 10.4444L14.667 5.72222ZM8.59556 1L14.667 5.72222Z" fill="currentColor"></path>
+                    <path d="M14.667 5.72222L0.500324 5.72222M14.667 5.72222L8.59556 10.4444M14.667 5.72222L8.59556 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </a>
+                </div>
+            </div>
+        </section>
+          <!-- Footer Sction Start -->
+        <footer class="footer-section footer-bg">
+            <div class="container">
+                <div class="footer-widgets-wrapper">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                            <div class="single-footer-widget">
+                                <div class="footer-content">
+                                    <h3 class="mb-3">
+                                        Subscribe our 
+                                        newsletter
+                                    </h3>
+                                    <p style="color:#333; font-size:20px">Join us today, get update everyday</p>
+                                    <div class="footer-input">
+                                        <input type="email" id="email" placeholder="Enter email...">
+                                        <button class="newsletter-btn" type="submit">
+                                           <img src="assets/img/circle-check.png" alt="img">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp" data-wow-delay=".4s">
+                            <div class="single-footer-widget">
+                                <div class="widget-head">
+                                    <h3>Company</h3>
+                                </div>
+                                <ul class="list-items">
+                                    <li>
+                                        <a href="about.html"> 
+                                            About us
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html"> 
+                                            Opportunity
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html"> 
+                                            Events
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html"> 
+                                            Consulting
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="news.html"> 
+                                            Our blog
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html"> 
+                                            Contact us
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html"> 
+                                            Careers
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="login.html"> 
+                                            User login
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp" data-wow-delay=".6s">
+                            <div class="single-footer-widget">
+                                <div class="widget-head">
+                                    <h3>Company</h3>
+                                </div>
+                                <ul class="list-items">
+                                    <li>
+                                        <a href="service.html"> 
+                                            Graphic design
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="service.html"> 
+                                            Marketing
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="service.html"> 
+                                            Photography
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="service.html"> 
+                                            Art generate
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="service.html"> 
+                                            Face swap
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="service.html"> 
+                                            Interior design
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="service.html"> 
+                                            Face swap
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="service.html"> 
+                                            Mockup create
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 ps-lg-3 wow fadeInUp" data-wow-delay=".8s">
+                            <div class="single-footer-widget">
+                                <div class="widget-head">
+                                    <h3>Instagram</h3>
+                                </div>
+                                <div class="row g-3">
+                                    <div class="col-md-6 col-sm-4 col-4">
+                                        <div class="footer-thumb">
+                                            <img src="assets/img/footer/gallery-1.jpg" alt="img">
+                                            <a href="index.html" class="icon">
+                                                <i class="fa-brands fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-4 col-4">
+                                        <div class="footer-thumb">
+                                            <img src="assets/img/footer/gallery-2.jpg" alt="img">
+                                            <a href="index.html" class="icon">
+                                                <i class="fa-brands fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-4 col-4">
+                                        <div class="footer-thumb">
+                                            <img src="assets/img/footer/gallery-3.jpg" alt="img">
+                                            <a href="index.html" class="icon">
+                                                <i class="fa-brands fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-4 col-4">
+                                        <div class="footer-thumb">
+                                            <img src="assets/img/footer/gallery-4.jpg" alt="img">
+                                            <a href="index.html" class="icon">
+                                                <i class="fa-brands fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-bottom-wrapper">
+                        <div class="logo-img wow fadeInUp" data-wow-delay=".3s" style="display: flex; justify-content: center;align-items: center;">
+                            
+                            
+                           <a href="index.html">
+                                <img src="assets/img/logo/EyresAI-logo.png" alt="logo-img" width="80px" height="100px">
+                           </a>
+                           <p class=" fadeInUp" data-wow-delay=".5s">EyresAI © 2024. All Rights Reserved.</p>
+                        </div>
+                        
+                        <div class="social-icon wow fadeInUp" data-wow-delay=".7s">
+                            <a href="index.html">Home</a>
+                            <a href="about.html">About</a>
+                            <a href="service.html">Service</a>
+                            <a href="project.html">Portfolio</a>
+                            <a href="news.html">Blog</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+ </body>      
+{% endblock body %}     
